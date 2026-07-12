@@ -394,3 +394,50 @@ footer{
     color:#ccc;
 
 }
+/* Back To Top Button */
+
+#topBtn{
+
+    display:none;
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    z-index:99;
+
+    border:none;
+
+    outline:none;
+
+    background:#00ff99;
+
+    color:black;
+
+    cursor:pointer;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    box-shadow:0 0 20px #00ff99;
+
+    transition:.3s;
+
+}
+
+#topBtn:hover{
+
+    transform:scale(1.1);
+
+    background:white;
+
+}
