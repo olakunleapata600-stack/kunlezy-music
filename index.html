@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-    <title>KUNLEZY MUSIC | Official Website</title>
-</head>
-<body>
-<header class="hero">
-<meta name="description" content="Official website of Nigerian Afrobeats artist Kunlezy. Listen to Izzy ft Kunlezy, discover new music, and connect with the artist.">
-<title>KUNLEZY MUSIC 🎵 | Official Website</title>
-
+   
 <h3 class="tagline">
     Music From The Heart • Built For The World 🌍
 </h3>
@@ -20,10 +10,21 @@
 🎵 Afrobeats Artist • Singer • Songwriter
 <br><br>
 Welcome to the official home of <strong>KUNLEZY</strong>.
-Experience my latest music, discover my journey, and join the vibe.
+Experience my latest music, discover my journey, and<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="kunlezy.png.png">
+
+    <h1 id="typing"></h1>
+
+    <meta name="description" content="Official website of Nigerian Afrobeats artist Kunlezy.">
+</head> join the vibe.
 </p>
 
-<button>🎵 Listen Now</button>
+<button id="listenBtn">🎵 Listen Now</button>
 
 </header>
 <section class="stats">
@@ -78,31 +79,30 @@ Welcome to my official website.
 <p>I create Afrobeats music that tells stories, inspires people, and brings positive vibes.</p>
 
 <section id="music">
-    <h2>🎵 My Latest Song</h2>
-<div class="now-playing">
 
-    <img src="kunlezy.png.png" alt="Album Cover" class="album-cover">
+    <div class="music-card">
 
-    <h3>🎧 NOW PLAYING</h3>
+        <h2>🔥 Latest Release</h2>
 
-    <h2>Izzy ft Kunlezy</h2>
+        <img src="kunlezy.png.png" class="album-cover" alt="Album Cover">
 
-    <p>Afrobeats • 2026 Release</p>
+        <h3>Izzy ft Kunlezy</h3>
 
-    <p class="plays">🔥 Trending on KUNLEZY MUSIC</p>
+        <p>Genre: Afrobeats</p>
 
-</div>
-    <audio id="song" controls>
-        <source src="song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+        <audio id="song" controls>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
 
-    <br><br>
+        <br><br>
 
-    <a href="song.mp3" download="song.mp3">
-        <button>⬇ Download Song</button>
-    </a>
-    </section>
+        <a href="song.mp3" download>
+            <button>⬇ Download Song</button>
+        </a>
+
+    </div>
+
+</section>
     <section id="gallery">
     <h2>📸 Gallery</h2>
 

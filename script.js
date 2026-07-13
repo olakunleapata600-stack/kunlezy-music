@@ -2,7 +2,7 @@ function toggleMenu() {
     document.getElementById("menu").classList.toggle("show");
 }
 
-const button = document.querySelector("button");
+const button = document.getElementById("listenBtn");
 const song = document.getElementById("song");
 
 button.addEventListener("click", function () {
@@ -30,3 +30,27 @@ function topFunction() {
         behavior: "smooth"
     });
 }
+// Typing Effect
+
+const text = "KUNLEZY MUSIC";
+let index = 0;
+
+function typeWriter(){
+
+    if(index < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typeWriter,150);
+
+    }
+
+}
+
+window.onload = function(){
+
+    typeWriter();
+
+};

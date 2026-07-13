@@ -19,11 +19,12 @@ body{
     padding:60px 20px;
 }
 
-.hero h1{
-    font-size:50px;
+h1{
+    font-size:55px;
     color:#00ff99;
+    text-shadow:0 0 20px #00ff99;
     margin-bottom:20px;
-    letter-spacing:2px;
+    letter-spacing:3px;
 }
 
 .hero-image{
@@ -34,14 +35,20 @@ body{
     border:5px solid #00ff99;
     box-shadow:0 0 30px #00ff99;
     margin:25px 0;
+    transition:0.5s;
+}
+
+.hero-image:hover{
+    transform:scale(1.05) rotate(2deg);
 }
 
 .hero p{
+    color:#ddd;
+    font-size:18px;
+    line-height:1.8;
     max-width:700px;
     margin:auto;
-    font-size:20px;
 }
-
 /* Buttons */
 button{
     background:#00ff99;
@@ -551,5 +558,111 @@ footer{
     padding:30px 20px;
 
 }
+
+}
+/* Text Selection */
+
+::selection{
+    background:#00ff99;
+    color:black;
+}
+/* Custom Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff99;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:white;
+}
+/* ===========================
+   Fade In Animation
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/* ===========================
+   Music Card
+=========================== */
+
+.music-card{
+
+    max-width:500px;
+
+    margin:60px auto;
+
+    padding:30px;
+
+    background:#1b1b1b;
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px rgba(0,255,153,.3);
+
+    text-align:center;
+
+}
+
+.album-cover{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin:20px 0;
+
+    transition:.4s;
+
+}
+
+.album-cover:hover{
+
+    transform:scale(1.05);
+
+}
+
+.music-card h3{
+
+    color:#00ff99;
+
+    margin-bottom:10px;
+
+}
+
+.music-card p{
+
+    color:#ccc;
+
+    margin-bottom:20px;
+
+}
+
+.music-card audio{
+
+    width:100%;
 
 }
