@@ -11,6 +11,7 @@ body{
     color:white;
     line-height:1.7;
     text-align:center;
+   overflow-x:hidden; 
 }
 
 /* Hero */
@@ -163,9 +164,54 @@ audio{
     margin:20px auto;
 }
 
-/* Gallery Image */
-#gallery img{
+.hero-image{
+
+    width:260px;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #00ff99;
+
+    box-shadow:0 0 40px #00ff99;
+
+    margin:25px 0;
+
     transition:.5s;
+
+    animation:floatImage 4s ease-in-out infinite;
+
+}
+
+.hero-image:hover{
+
+    transform:scale(1.08);
+
+}
+
+@keyframes floatImage{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
 }
 
 #gallery img:hover{
@@ -336,8 +382,28 @@ footer{
 
 .hero{
 
-    background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75));
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:linear-gradient(
+        135deg,
+        #050505,
+        #111,
+        #050505
+    );
+
+    animation:fadeIn 1.5s ease;
 
 }
 /* Artist Stats */
@@ -401,7 +467,35 @@ footer{
     color:#ccc;
 
 }
-/* Back To Top Button */
+/button{
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#00ff99;
+
+    color:black;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 0 25px #00ff99;
+
+}
+
+button:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 50px #00ff99;
+
+}* Back To Top Button */
 
 #topBtn{
 
@@ -664,5 +758,36 @@ footer{
 .music-card audio{
 
     width:100%;
+
+}
+body{
+
+    background:#050505;
+
+    background-size:400% 400%;
+
+    animation:bgMove 12s ease infinite;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+background-position:left;
+
+}
+
+50%{
+
+background-position:right;
+
+}
+
+100%{
+
+background-position:left;
+
+}
 
 }
