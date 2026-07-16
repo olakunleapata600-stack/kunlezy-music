@@ -5,13 +5,14 @@ function toggleMenu() {
 const button = document.getElementById("listenBtn");
 const song = document.getElementById("song");
 
-button.addEventListener("click", function () {
-    song.play();
-    song.scrollIntoView({
-        behavior: "smooth"
+if (button && song) {
+    button.addEventListener("click", function () {
+        song.play();
+        song.scrollIntoView({
+            behavior: "smooth"
+        });
     });
-});
-
+}
 document.getElementById("year").textContent = new Date().getFullYear();
 
 let mybutton = document.getElementById("topBtn");
@@ -49,8 +50,4 @@ function typeWriter(){
 
 }
 
-window.onload = function(){
-
-    typeWriter();
-
-};
+window.addEventListener("load", typeWriter);

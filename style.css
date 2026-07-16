@@ -68,24 +68,58 @@ button:hover{
     transform:scale(1.05);
 }
 
-/* Navigation */
 nav{
-    background:#111;
-    padding:20px;
     position:sticky;
     top:0;
+    width:100%;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    padding:18px;
+    z-index:1000;
+    border-bottom:1px solid rgba(0,255,153,.25);
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
     font-size:18px;
+    font-weight:bold;
     transition:.3s;
+    position:relative;
 }
 
 nav a:hover{
     color:#00ff99;
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#00ff99;
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
 }
 
 /* Sections */
@@ -467,7 +501,7 @@ footer{
     color:#ccc;
 
 }
-/button{
+button{
 
     padding:16px 35px;
 
@@ -490,12 +524,11 @@ footer{
 }
 
 button:hover{
-
     transform:translateY(-6px);
-
     box-shadow:0 0 50px #00ff99;
+}
 
-}* Back To Top Button */
+/* Back To Top Button */
 
 #topBtn{
 
@@ -682,19 +715,6 @@ footer{
    Fade In Animation
 =========================== */
 
-@keyframes fadeIn{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
 /* ===========================
    Music Card
 =========================== */
@@ -732,13 +752,6 @@ footer{
     transition:.4s;
 
 }
-
-.album-cover:hover{
-
-    transform:scale(1.05);
-
-}
-
 .music-card h3{
 
     color:#00ff99;
@@ -761,13 +774,16 @@ footer{
 
 }
 body{
-
-    background:#050505;
+    background:linear-gradient(
+        -45deg,
+        #050505,
+        #111111,
+        #0b0b0b,
+        #050505
+    );
 
     background-size:400% 400%;
-
     animation:bgMove 12s ease infinite;
-
 }
 
 @keyframes bgMove{
